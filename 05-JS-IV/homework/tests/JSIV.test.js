@@ -48,7 +48,7 @@ describe('invocarMetodo(object, method)', function() {
     const object = {
       x: 0,
       incrementX: function() {
-        this.x++;
+       this.x++;
       },
     }
     invocarMetodo(object, 'incrementX');
