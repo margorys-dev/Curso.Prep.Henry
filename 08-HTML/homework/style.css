@@ -1,0 +1,33 @@
+body {
+    background: rgb(230, 223, 223);
+
+}
+h1 {
+    color: rgb(212, 52, 52);
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+#thirdDiv {
+    height: 600px;
+    width: 500px;
+    background: deeppink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border: 3px solid rgb(126, 122, 122);
+}
+#thirdDiv ul li {
+    list-style: none;
+}
+
+#spanId {
+    font-size: 18px;
+    margin: 50px;
+}
+
+
