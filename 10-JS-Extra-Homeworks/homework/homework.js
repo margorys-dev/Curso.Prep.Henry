@@ -79,6 +79,11 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  let obj = {}
+  arr.map((ele) => {
+    obj[ele] = ele.length
+  })
+  return Object.keys(obj).map((ele)=>({name: ele, valor: obj[ele]})).sort((a,b)=> a.valor - b.valor).map((ele)=> ele.name)
 }
 
 
@@ -88,6 +93,7 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  return arreglo1.filter((ele,ind)=>   arreglo2.includes(ele)  )
 }
 
 
