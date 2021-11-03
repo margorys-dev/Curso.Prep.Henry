@@ -10,6 +10,7 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  return Object.entries(objeto)
 }
 
 
@@ -18,7 +19,13 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  let obj = {}
+  string.split('').map((ele)=>{
+     obj[ele] = !(obj[ele]) ? 1 : obj[ele] + 1;
+ }) 
+ return obj
 }
+
 
 
 function capToFront(s) {
@@ -26,6 +33,13 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  let arr1 = [];
+  let arr2 = [];
+  s.split('').filter((ele)=> (ele === ele.toUpperCase())? arr1.push(ele): arr2.push(ele));
+  
+
+ 
+  return arr1.concat(arr2).join('')
 }
 
 
@@ -35,6 +49,10 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  let lol = str.split(' ');
+  let arr1 = [];
+  arr1 = lol.map((ele) => ele.split('').reverse().join(''))
+  return arr1.join(' ')
 } 
 
 
@@ -43,6 +61,8 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+     arr =  numero.toString().split('').reverse().join('') * 1;
+     return (numero === arr)? "Es capicua" : "No es capicua"
 }
 
 
@@ -50,6 +70,8 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+ let  arr =  cadena.split('')
+  return arr.filter((ele) => ele !== 'a' && ele !== 'b' && ele !== 'c').join('')
 }
 
 
